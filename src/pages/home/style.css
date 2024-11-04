@@ -1,12 +1,38 @@
-.top-home{
-    background-color: darkgrey;
-    max-height: fit-content;
-
+.home {
+    padding: 20px;
+    background-color: grey;
 }
 
-.top-home h1{
-    font-size: larger;
+.top-home {
+    margin-bottom: 20px;
+}
+
+.theme-section {
+    margin-bottom: 20px;
+    padding: 16px;
+}
+
+.reviews-container {
     display: flex;
-    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
 }
 
+.card {
+    flex: 1 1 calc(20% - 16px);
+    max-width: calc(20% - 16px);
+}
+
+.see-more-button {
+    margin-top: 10px;
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.see-more-button:hover {
+    background-color: #0056b3;
+}

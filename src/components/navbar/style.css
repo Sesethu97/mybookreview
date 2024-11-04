@@ -61,3 +61,34 @@ section nav li:hover a {
     height: 24px;
 }
 
+.popup-menu {
+    position: absolute;
+    top: 60px; 
+    right: 20px; 
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 101; 
+    width: 200px; 
+}
+
+.popup-menu ul {
+    list-style: none;
+    padding: 10px;
+}
+
+.popup-menu li {
+    margin: 5px 0;
+}
+
+.popup-menu li a {
+    text-decoration: none;
+    color: #1B1B1B;
+    display: block; 
+    padding: 5px;
+}
+
+.popup-menu li a:hover {
+    background-color: #f0f0f0; 
+}

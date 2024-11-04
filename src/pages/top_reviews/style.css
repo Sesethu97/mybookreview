@@ -1,0 +1,40 @@
+.top_rated {
+    text-align: center;
+    padding-top: 30px;
+}
+
+.top_rated h1 {
+    margin-bottom: 20px;
+    font-size: 40px;
+    color: #E4E4DE;
+}
+
+.top_rated_cards_container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.top_rated_cards_container .card {
+    width: calc(25% - 10px); 
+    margin-bottom: 20px;
+    box-sizing: border-box;
+}
+
+@media screen and (max-width: 1200px) {
+    .review_cards_container .card {
+        width: calc(33.33% - 10px); 
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .review_cards_container .card {
+        width: calc(50% - 10px);
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .review_cards_container .card {
+        width: 100%;
+    }
+}

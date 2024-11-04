@@ -2,20 +2,13 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 10px;
-    border-bottom: 2px solid #b3b317;
-    border-top: 2px solid #E4E4DE;
-    background-color: brown;
     width: 100%;
 }
 
 .card {
-    border-left: 2px solid #E4E4DE;
-    background-color: brown;
 
     padding-top: 10px;
     margin: 0;
-    background: none;
-    border-radius: 0;
     color: #1B1B1B;
 }
 
