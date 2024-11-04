@@ -1,0 +1,12 @@
+.top-home{
+    background-color: darkgrey;
+    max-height: fit-content;
+
+}
+
+.top-home h1{
+    font-size: larger;
+    display: flex;
+    align-items: center;
+}
+
