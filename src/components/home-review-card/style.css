@@ -1,56 +1,87 @@
 .card-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 10px;
-    width: 100%;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 5px;
+    max-width: 600px; 
+    margin: 0 auto;
+    justify-content: center; 
+    align-content: start;
+    justify-items: center; 
 }
 
 .card {
-
+    position: relative; 
     padding-top: 10px;
     margin: 0;
-    color: #1B1B1B;
-}
-
-.card:nth-child(3n) {
-    border-right: none;
-}
-
-.card-container::after {
-    content: '';
-    grid-column: 1 / -1;
-    border-bottom: 2px solid #E4E4DE;
-    border-top: 2px solid #E4E4DE;
-
-}
-
-.card h2 {
-    font-size: 18px;
-    margin-bottom: 8px;
-    color: #1B1B1B;
+    border-radius: 0;
+    color: #d03535;
 }
 
 .card img {
     width: 100%;
     height: auto;
-    max-width: 150px;
-    max-height: 150px;
+    max-width: 200px;
+    max-height: 250px;
     display: block;
     margin: 10px auto;
+    border-radius: 6%;
+    transition: transform 0.3s ease;
 }
 
-.card p {
+.card:hover img {
+    transform: scale(1.05);
+}
+
+/* Pop-up styling */
+.popup {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 250px;
+    background-color: white;
+    padding: 15px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    z-index: 10;
+    text-align: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.card:hover .popup {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Pop-up image styling */
+.popup img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 6%;
+    margin-bottom: 10px;
+}
+
+.popup h2 {
+    font-size: 18px;
+    margin-bottom: 5px;
+    color: #1B1B1B;
+}
+
+.popup p {
     font-size: 14px;
     line-height: 1.5;
     color: #1B1B1B;
-    margin: 10px 0;
+    margin: 5px 0;
 }
 
-.card .learn {
-    display: block;
+.popup .learn {
+    display: inline-block;
     margin-top: 10px;
-    padding: 5px 0;
-    color: #1B1B1B;
+    padding: 5px 10px;
+    background-color: #1B1B1B;
+    color: #ffffff;
     text-decoration: none;
     border-radius: 4px;
 }

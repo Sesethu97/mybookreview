@@ -7,9 +7,9 @@ const ReviewCard = ({ id, title, author, image, rating, content }) => {
     const [hovered, setHovered] = useState(false);
 
     return (
-        <div 
-            className='card' 
-            onMouseEnter={() => setHovered(true)} 
+        <div
+            className="card"
+            onMouseEnter={() => setHovered(true)}
             onMouseLeave={() => setHovered(false)}
         >
             <img src={image} alt={title} />
@@ -17,14 +17,16 @@ const ReviewCard = ({ id, title, author, image, rating, content }) => {
             <div>
                 <StarRating rating={rating} />
             </div>
-            
+
             {hovered && (
-                <div className='popup'>
+                <div className="popup">
                     <img src={image} alt={title} />
                     <h2>{title}</h2>
                     <p>by {author}</p>
-                    <p>{content .slice(0, 100)}...</p>
-                    <Link to={`/book/${id}`} className='learn'>More</Link>
+                    <p>{content && content.slice(0, 100)}...</p> 
+                    <Link to={`/review/${id}`} className="learn">
+                        More
+                    </Link>
                 </div>
             )}
         </div>

@@ -1,12 +1,21 @@
-.carousel-container {
-    width: 60%;
-    height: 20px; 
-    margin: 0 auto;
-    overflow: hidden; 
+.carousel {
+    margin-top: 20px;
+    padding: 20px;
 }
 
-.carousel-container img {
-    width: 60%;
-    height: 20px; 
-    object-fit: fill; 
+.carousel-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel-item img {
+    width: 100%;  
+    max-width: 90%;  
+    height: auto;
+    border-radius: 8px;
+}
+
+.carousel-section h2 {
+    margin-bottom: 10px;
 }

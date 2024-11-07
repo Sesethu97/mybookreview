@@ -1,0 +1,45 @@
+.review-details {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    flex-direction: column; 
+    color: #1B1B1B;
+}
+
+.review-content {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+}
+
+.image-side-left {
+    flex: 0 0 20%;
+    padding-left: 40px;
+    margin-right: 10px; 
+    color: #1B1B1B;
+}
+
+.info-side-right {
+    flex: 0 0 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 10px;
+}
+
+.review-details h1 {
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.5em; 
+    color: #1B1B1B;
+
+}
+
+.review-details .info-side-right p:first-child {
+    font-size: 1.3em; 
+}
+
+.review-details .info-side-right p {
+    font-size: 1em; 
+}

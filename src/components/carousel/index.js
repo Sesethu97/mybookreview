@@ -1,36 +1,30 @@
 import React from 'react';
-import "react-responsive-carousel/lib/styles/carousel.min.css";
-import { Carousel } from 'react-responsive-carousel';
-import image1 from '../../images/aboutbook.jpg';
-import image2 from '../../images/days.jpeg';
-import image3 from '../../images/bookreview.jpg';
+import Slider from 'react-slick';
+import { Link } from 'react-router-dom';  
+import './style.css';
 
-const ImageCarousel = () => {
-  return (
-    <div className="carousel-container">
-      <Carousel 
-        showThumbs={false} 
-        autoPlay 
-        infiniteLoop 
-        interval={3000} 
-        stopOnHover
-        showArrows
-        showStatus={false}
-        dynamicHeight={false}
-        emulateTouch
-      >
-        <div>
-          <img src={image1} alt="First slide" />
+const Carousel = ({ books }) => {
+    const settings = {
+        dots: true,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 2,  
+                slidesToScroll: 1,
+    };
+
+    return (
+        <div className="carousel">
+            <Slider {...settings}>
+                {books.map((book) => (
+                    <div key={book.id} className="carousel-item">
+                        <Link to={`/review/${book.id}`}>  
+                            <img src={book.image} alt={book.title} />
+                        </Link>
+                    </div>
+                ))}
+            </Slider>
         </div>
-        <div>
-          <img src={image2}alt="Second slide" />
-        </div>
-        <div>
-          <img src={image3} alt="Third slide" />
-        </div>
-      </Carousel>
-    </div>
-  );
+    );
 };
 
-export default ImageCarousel;
+export default Carousel;
