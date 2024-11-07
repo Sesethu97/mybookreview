@@ -14,7 +14,7 @@ const Reviews = () => {
 
     return (
         <div className='reviews'>
-            <h1>Book Reviews lots</h1>
+            <h1>Book Reviews </h1>
             
             <nav>
                 <ul>
