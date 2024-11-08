@@ -16,7 +16,6 @@ const Home = () => {
                 <h1>Welcome to the Home Page</h1>
             </div>
             
-            {/* Carousel section */}
             <div className="carousel-section">
                 <h2>Top Rated Books</h2>
                 <Carousel books={topRatedReviews} />
