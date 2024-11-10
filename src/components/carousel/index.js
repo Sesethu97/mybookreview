@@ -8,14 +8,14 @@ const Carousel = ({ books }) => {
         dots: true,
         infinite: true,
         speed: 500,
-        slidesToShow: 2,  
-                slidesToScroll: 1,
+        slidesToShow: 1, 
+        slidesToScroll: 1,  
     };
 
     return (
         <div className="carousel">
             <Slider {...settings}>
-                {books.map((book) => (
+                {books.slice(0, 3).map((book) => ( 
                     <div key={book.id} className="carousel-item">
                         <Link to={`/review/${book.id}`}>  
                             <img src={book.image} alt={book.title} />

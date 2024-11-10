@@ -1,15 +1,5 @@
-.card-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 5px;
-    max-width: 600px; 
-    margin: 0 auto;
-    justify-content: center; 
-    align-content: start;
-    justify-items: center; 
-}
 
-.card {
+.home-card {
     position: relative; 
     padding-top: 10px;
     margin: 0;
@@ -17,7 +7,7 @@
     color: #d03535;
 }
 
-.card img {
+.home-card img {
     width: 100%;
     height: auto;
     max-width: 200px;
@@ -28,7 +18,7 @@
     transition: transform 0.3s ease;
 }
 
-.card:hover img {
+.home-card:hover img {
     transform: scale(1.05);
 }
 
@@ -50,7 +40,7 @@
     transition: opacity 0.3s ease, visibility 0.3s ease;
 }
 
-.card:hover .popup {
+.home-card:hover .popup {
     opacity: 1;
     visibility: visible;
 }

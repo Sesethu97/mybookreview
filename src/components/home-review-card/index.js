@@ -9,7 +9,7 @@ const HomeReviewCard = ({ id, title, author, image, rating, content }) => {
     return (
         
         <div 
-            className='card' 
+            className='home-card' 
             onMouseEnter={() => setHovered(true)} 
             onMouseLeave={() => setHovered(false)}
         >
